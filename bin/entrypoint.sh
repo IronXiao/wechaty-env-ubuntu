@@ -8,7 +8,8 @@ set -e
 
 export HOME=/bot
 export PATH=$PATH:/wechaty/bin:/wechaty/node_modules/.bin
-
+SCRIPT_PATH=$(dirname "$(realpath "$0")")
+REPO_PATH=$(dirname "$SCRIPT_PATH")
 function wechaty::banner() {
   echo
   figlet " Wechaty "
@@ -217,7 +218,7 @@ function wechaty::io-client() {
   echo "WECHATY_TOKEN=$WECHATY_TOKEN "
   echo
 
-  pushd /wechaty
+  pushd $REPO_PATH
   npm run io-client
   popd
 }
