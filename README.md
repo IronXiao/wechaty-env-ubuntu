@@ -1,5 +1,7 @@
 # wechaty ubuntu运行环境
 
+基于[wechaty](https://github.com/wechaty/wechaty) 0.65.15 docker 镜像提取出来的Ubuntu运行环境
+
 ## 运行说明
 
 1. 下载代码
